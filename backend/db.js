@@ -23,6 +23,8 @@ const DEFAULT_DATA = {
   },
   documents: [], // invoices + estimates
   payments: [],
+  subscription: { plan: "free", planName: "Free", status: "active", expiresAt: null },
+  subscriptionPayments: [],
 };
 
 function ensureDb() {
