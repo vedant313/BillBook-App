@@ -3,6 +3,7 @@ import cors from "cors";
 import businessRoutes from "./routes/business.js";
 import documentsRoutes from "./routes/documents.js";
 import paymentsRoutes from "./routes/payments.js";
+import subscriptionRoutes from "./routes/subscription.js";
 
 const app = express();
 const PORT = process.env.PORT || 4000;
@@ -13,6 +14,7 @@ app.use(express.json({ limit: "10mb" })); // higher limit so a base64 logo image
 app.use("/api/business", businessRoutes);
 app.use("/api/documents", documentsRoutes);
 app.use("/api/payments", paymentsRoutes);
+app.use("/api/subscription", subscriptionRoutes);
 
 app.get("/api/health", (req, res) => res.json({ ok: true }));
 
